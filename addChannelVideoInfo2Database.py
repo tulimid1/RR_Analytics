@@ -1,11 +1,9 @@
-import pytube as pyt
 from ScrapeYouTubeVideoViews import ScrapeYouTubeVideoViews
+from getYouTubeURLsFromTxT import getYouTubeURLsFromTxT
 
-RRchannel_url = "https://www.youtube.com/channel/UC1bzWxHW5rMuoJeXDD-sEsQ/videos"
-RRchannel = pyt.Channel(RRchannel_url)
+def addChannelVideoInfo2Database():
+    RRchannel_urls = getYouTubeURLsFromTxT()
 
-RR_video_urls = RRchannel.video_urls
-
-for video_url in RR_video_urls:
-    RR_video = ScrapeYouTubeVideoViews(video_url)
-    RR_video.addData2DataBase()
+    for video_url in RRchannel_urls:
+        RR_video = ScrapeYouTubeVideoViews(video_url)
+        RR_video.addData2DataBase()

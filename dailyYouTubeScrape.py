@@ -1,0 +1,6 @@
+from addChannelVideoInfo2Database import addChannelVideoInfo2Database
+from visualizeAllVideoViews import visualizeAllvideoViews
+
+addChannelVideoInfo2Database()
+
+visualizeAllvideoViews()
