@@ -10,7 +10,7 @@ def scrapeAndVisualize():
     visualizeAllvideoViews()
 
 
-schedule.every().day.at("9:00").do(scrapeAndVisualize)
+schedule.every().day.at("09:00").do(scrapeAndVisualize)
 
 secondsPerDay = 86400
 while True:
