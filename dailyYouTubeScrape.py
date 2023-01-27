@@ -11,7 +11,7 @@ def scrapeAndVisualize():
     visualizeAllvideoViews()
 
 
-schedule.every().day.at("08:45").do(scrapeAndVisualize)
+schedule.every().day.at("08:00").do(scrapeAndVisualize)
 
 secondsPerDay = 864000
 waitTime = secondsPerDay / 80  # every 3 hours
